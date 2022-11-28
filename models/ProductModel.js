@@ -39,14 +39,6 @@ const productSchema = mongoose.Schema(
             required: true,
         },
 
-        types: {
-            type: String,
-            enum: {
-                values: ["feature", "onsale"],
-            },
-            default: "onsale",
-        },
-
         price: {
             type: Number,
             required: true,
@@ -65,21 +57,18 @@ const productSchema = mongoose.Schema(
                 values: ["in-stock", "out-of-stock"],
                 message: " status can't be {VALUE} ",
             },
-            default: "inStock",
+            default: "in-stock",
         },
-
         image: [
             {
                 type: String,
                 required: true,
             },
         ],
-
         category: {
             type: String,
             required: true,
         },
-
         brand: {
             type: String,
             required: true,

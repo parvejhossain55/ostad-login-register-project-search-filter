@@ -21,7 +21,7 @@ router.get("/GetProductById/:id", AuthMiddleware, ProductController.GetProductBy
 router.put("/UpdateProduct/:id", AuthMiddleware, ProductController.UpdateProduct);
 router.delete("/DeleteProduct/:id", AuthMiddleware, ProductController.DeleteProduct);
 
-// GetAllProduct/page=1&limit=10&search=
+// GetAllProduct?page=1&limit=10&search=
 router.get("/GetAllProduct", AuthMiddleware, ProductController.GetAllProduct);
 
 
